@@ -1,0 +1,196 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffec34b2a66, pid=19232, tid=17964
+#
+# JRE version: OpenJDK Runtime Environment AdoptOpenJDK (11.0.8+10) (build 11.0.8+10)
+# Java VM: OpenJDK 64-Bit Server VM AdoptOpenJDK (11.0.8+10, mixed mode, tiered, compressed oops, parallel gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1a2a66]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/AdoptOpenJDK/openjdk-support/issues
+
+[error occurred during error reporting (printing bug submit message), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffec39ea43a]
+
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dfile.encoding=utf8 -DwatchParentProcess=false -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xverify:none c:\Users\Public\wpilib\2021\vscode\data\extensions\redhat.java-0.73.0\server\plugins\org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar -configuration c:\Users\Public\wpilib\2021\vscode\data\user-data\User\globalStorage\redhat.java\0.73.0\config_win -data c:\Users\Public\wpilib\2021\vscode\data\user-data\User\workspaceStorage\742f11c85b77d84e30fc7c60643a43c4\redhat.java\jdt_ws
+
+Host: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+Time: Sun Feb 21 17:41:27 2021 Eastern Standard Time elapsed time: 2 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001b9b657c800):  
+
+
+Current CompileTask:
+C1:   2660 2208       2       java.lang.String$CaseInsensitiveComparator::compare (68 bytes)
+
+Stack: [0x00000052d5f00000,0x00000052d6000000],  sp=0x00000052d5ffe130,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1a2a66]
+V  [jvm.dll+0x1549f8]
+V  [jvm.dll+0x154984]
+V  [jvm.dll+0x14cc86]
+V  [jvm.dll+0x14ae7e]
+V  [jvm.dll+0x137360]
+V  [jvm.dll+0x11f079]
+V  [jvm.dll+0x11e97f]
+V  [jvm.dll+0x11ebaf]
+V  [jvm.dll+0x11de57]
+V  [jvm.dll+0x11fd67]
+V  [jvm.dll+0x208f27]
+V  [jvm.dll+0x20710b]
+V  [jvm.dll+0x6dc339]
+V  [jvm.dll+0x6d53e4]
+V  [jvm.dll+0x5de996]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x4d241]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), writing address 0x00000000ffffffff
+
+
+Register to memory mapping:
+
+RIP=0x00007ffec34b2a66 jvm.dll
+RAX=0x0 is NULL
+RBX=0x000001b9b657c800 is a thread
+RCX=0x000001b9b657c800 is a thread
+RDX=0x0000000000000002 is an unknown value
+RSP=0x00000052d5ffe130 is pointing into the stack for thread: 0x000001b9b657c800
+RBP=0x00000000ffffffff is an unallocated location in the heap
+RSI=0x0 is NULL
+RDI=0x000001b9b7f967f0 points into unknown readable memory: 60 8b b0 c3 fe 7f 00 00
+R8 =0x000001b9b7f967f0 points into unknown readable memory: 60 8b b0 c3 fe 7f 00 00
+R9 =0x000001b9b80485f0 points into unknown readable memory: b8 09 af c3 fe 7f 00 00
+R10=0x000001b9b65638e0 points into unknown readable memory: 01 00 00 00 1e 00 00 00
+R11={method} {0x000001b9b5cccd18} 'compare' '(Ljava/lang/String;Ljava/lang/String;)I' in 'java/lang/String$CaseInsensitiveComparator'
+R12=0x00007ffec3af09b8 jvm.dll
+R13=0x0 is NULL
+R14=0x000001b9b80485f0 points into unknown readable memory: b8 09 af c3 fe 7f 00 00
+R15=0x000001b9b7f967f0 points into unknown readable memory: 60 8b b0 c3 fe 7f 00 00
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000001b9b657c800, RCX=0x000001b9b657c800, RDX=0x0000000000000002
+RSP=0x00000052d5ffe130, RBP=0x00000000ffffffff, RSI=0x0000000000000000, RDI=0x000001b9b7f967f0
+R8 =0x000001b9b7f967f0, R9 =0x000001b9b80485f0, R10=0x000001b9b65638e0, R11=0x000001b9b5cccd10
+R12=0x00007ffec3af09b8, R13=0x0000000000000000, R14=0x000001b9b80485f0, R15=0x000001b9b7f967f0
+RIP=0x00007ffec34b2a66, EFLAGS=0x0000000000010292
+
+Top of Stack: (sp=0x00000052d5ffe130)
+0x00000052d5ffe130:   0000000000000007 000001b9b8043d80
+0x00000052d5ffe140:   0000000100000001 0000000000000000
+0x00000052d5ffe150:   0000000000000007 00007ffec3433dc3
+0x00000052d5ffe160:   00000052d5ffe3e0 00007ffec34649f8
+0x00000052d5ffe170:   0000000000000007 000001b9b657c800
+0x00000052d5ffe180:   000000000000000b 0000000000000000
+0x00000052d5ffe190:   000001b9b657c800 00000052d5ffe250
+0x00000052d5ffe1a0:   00000000ffffffff 000001b9b80484f0
+0x00000052d5ffe1b0:   000001b9b80445d0 000001b9b80485f0
+0x00000052d5ffe1c0:   0000000000000000 00000000000007ff
+0x00000052d5ffe1d0:   00000052d5ffe3e0 00007ffec3464984
+0x00000052d5ffe1e0:   000000000000000b 000001b9b80484f0
+0x00000052d5ffe1f0:   000001b9b7f967f0 000001b9b657c800
+0x00000052d5ffe200:   00000000000007ff 00000000ffffffff
+0x00000052d5ffe210:   0000005200000000 000001b9b8048501
+0x00000052d5ffe220:   00007ffec3af09b8 0000000000000000 
+
+Instructions: (pc=0x00007ffec34b2a66)
+0x00007ffec34b2966:   00 48 8b cd e8 d1 76 f1 ff 49 8b ce e8 39 76 f1
+0x00007ffec34b2976:   ff 48 8b 84 24 90 00 00 00 48 8b 9c 24 98 00 00
+0x00007ffec34b2986:   00 48 89 45 20 4c 89 75 10 4c 89 65 18 48 83 c4
+0x00007ffec34b2996:   40 41 5f 41 5e 41 5d 41 5c 5f 5e 5d c3 cc cc cc
+0x00007ffec34b29a6:   cc cc cc cc cc cc cc cc cc cc 48 89 5c 24 18 48
+0x00007ffec34b29b6:   89 74 24 20 57 48 83 ec 30 8b 15 a7 88 88 00 48
+0x00007ffec34b29c6:   8b f9 65 48 8b 04 25 58 00 00 00 bb 08 00 00 00
+0x00007ffec34b29d6:   48 8b 04 d0 48 8b 1c 03 48 89 5c 24 48 c7 83 b8
+0x00007ffec34b29e6:   03 00 00 05 00 00 00 80 3d 5c 8e 7e 00 00 75 09
+0x00007ffec34b29f6:   83 3d 93 03 86 00 01 74 18 80 3d 4b 8e 7e 00 00
+0x00007ffec34b2a06:   74 07 e8 93 e8 42 00 eb 08 48 8b cb e8 69 80 f5
+0x00007ffec34b2a16:   ff 83 3d 72 4c 86 00 01 75 1b 48 8b 03 48 8b cb
+0x00007ffec34b2a26:   ff 50 20 84 c0 74 0e 48 8b 83 08 01 00 00 c0 e8
+0x00007ffec34b2a36:   03 24 01 eb 0b 8b 05 0f 49 86 00 85 c0 0f 95 c0
+0x00007ffec34b2a46:   84 c0 75 0d 8b 83 d8 00 00 00 a9 00 00 00 30 74
+0x00007ffec34b2a56:   08 48 8b cb 4c 00 61 00 74 00 69 00 74 00 75 00
+0x00007ffec34b2a66:   64 00 65 00 20 00 33 00 34 00 36 00 30 00 20 00
+0x00007ffec34b2a76:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2a86:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2a96:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2aa6:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2ab6:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2ac6:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2ad6:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2ae6:   20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00
+0x00007ffec34b2af6:   20 00 20 00 00 00 48 8b 43 10 48 89 47 10 48 8b
+0x00007ffec34b2b06:   4b 18 48 89 4f 18 48 8b 4b 20 48 89 4f 20 48 8d
+0x00007ffec34b2b16:   4c 24 48 e8 72 12 f8 ff 48 8b 5c 24 50 48 8b c6
+0x00007ffec34b2b26:   48 8b 74 24 58 48 83 c4 30 5f c3 cc cc cc cc cc
+0x00007ffec34b2b36:   cc cc cc cc cc cc cc cc cc cc 48 89 5c 24 08 48
+0x00007ffec34b2b46:   89 74 24 10 48 89 7c 24 18 41 56 48 83 ec 20 65
+0x00007ffec34b2b56:   48 8b 04 25 58 00 00 00 48 8b f1 44 8b 05 04 87 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x0000000000000007 is an unknown value
+stack at sp + 1 slots: 0x000001b9b8043d80 points into unknown readable memory: 00 00 00 00 00 00 00 00
+stack at sp + 2 slots: 0x0000000100000001 is pointing into metadata
+stack at sp + 3 slots: 0x0 is NULL
+stack at sp + 4 slots: 0x0000000000000007 is an unknown value
+stack at sp + 5 slots: 0x00007ffec3433dc3 jvm.dll
+stack at sp + 6 slots: 0x00000052d5ffe3e0 is pointing into the stack for thread: 0x000001b9b657c800
+stack at sp + 7 slots: 0x00007ffec34649f8 jvm.dll
+
+VM_Operation (0x00000052d65fed70): RevokeBias, mode: safepoint, requested by thread 0x000001b9b8fbe000
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001b9b92850f0, length=20, elements={
+0x000001b99c552800, 0x000001b9b6564800, 0x000001b9b656f800, 0x000001b99c62d800,
+0x000001b9b76f3800, 0x000001b9b6577800, 0x000001b9b657c800, 0x000001b9b657e000,
+0x000001b9b780f000, 0x000001b9b7998800, 0x000001b9b806a000, 0x000001b9b81c9800,
+0x000001b9b81ca800, 0x000001b9b82a1000, 0x000001b9b8648800, 0x000001b9b8fdb000,
+0x000001b9b8fcd000, 0x000001b9b8fbe000, 0x000001b9b90fa800, 0x000001b9b922f800
+}
+
+Java Threads: ( => current thread )
+  0x000001b99c552800 JavaThread "main" [_thread_blocked, id=11328, stack(0x00000052d5700000,0x00000052d5800000)]
+  0x000001b9b6564800 JavaThread "Reference Handler" daemon [_thread_blocked, id=980, stack(0x00000052d5a00000,0x00000052d5b00000)]
+  0x000001b9b656f800 JavaThread "Finalizer" daemon [_thread_blocked, id=4452, stack(0x00000052d5b00000,0x00000052d5c00000)]
+  0x000001b99c62d800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=20420, stack(0x00000052d5c00000,0x00000052d5d00000)]
+  0x000001b9b76f3800 JavaThread "Attach Listener" daemon [_thread_blocked, id=10332, stack(0x00000052d5d00000,0x00000052d5e00000)]
+  0x000001b9b6577800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=20016, stack(0x00000052d5e00000,0x00000052d5f00000)]
+=>0x000001b9b657c800 
+  0x000001b9b657e000 JavaThread "Sweeper thread" daemon [_thread_blocked, id=3516, stack(0x00000052d6000000,0x00000052d6100000)]
+  0x000001b9b780f000 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=16808, stack(0x00000052d6100000,0x00000052d6200000)]
+  0x000001b9b7998800 JavaThread "Service Thread" daemon [_thread_blocked, id=6244, stack(0x00000052d6200000,0x00000052d6300000)]
+  0x000001b9b806a000 JavaThread "Active Thread: Equinox Container: 09c27d0a-fa5d-41f5-b404-a88d196af74b" [_thread_blocked, id=20860, stack(0x00000052d6600000,0x00000052d6700000)]
+  0x000001b9b81c9800 JavaThread "Framework Event Dispatcher: Equinox Container: 09c27d0a-fa5d-41f5-b404-a88d196af74b" daemon [_thread_blocked, id=13620, stack(0x00000052d6700000,0x00000052d6800000)]
+  0x000001b9b81ca800 JavaThread "Start Level: Equinox Container: 09c27d0a-fa5d-41f5-b404-a88d196af74b" daemon [_thread_in_vm, id=9900, stack(0x00000052d6800000,0x00000052d6900000)]
+  0x000001b9b82a1000 JavaThread "SCR Component Actor" daemon [_thread_blocked, id=20572, stack(0x00000052d6900000,0x00000052d6a00000)]
+  0x000001b9b8648800 JavaThread "Timer-0" daemon [_thread_blocked, id=21312, stack(0x00000052d6d00000,0x00000052d6e00000)]
+  0x000001b9b8fdb000 JavaThread "Worker-JM" [_thread_blocked, id=6140, stack(0x00000052d6e00000,0x00000052d6f00000)]
+  0x000001b9b8fcd000 JavaThread "Worker-0" [_thread_blocked, id=7240, stack(0x00000052d6f00000,0x00000052d7000000)]
+  0x000001b9b8fbe000 JavaThread "Worker-1" [_thread_blocked, id=19576, stack(0x00000052d6500000,0x00000052d6600000)]
+  0x000001b9b90fa800 JavaThread "Java indexing" daemon [_thread_blocked, id=20204, stack(0x00000052d7000000,0x00000052d7100000)]
+  0x000001b9b922f800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=21128, stack(0x00000052d7100000,0x00000052d7200000)]
+
+Other Threads:
+  0x000001b9b655f000 VMThread "VM Thread" [stack: 0x00000052d5900000,0x00000052d5a00000] [id=9320] _threads_hazard_ptr=0x000001b9b92850f0
+  0x000001b9b78fd000 WatcherThread [stack: 0x00000052d6300000,0x00000052d6400000] [id=21444]
+  0x000001b99c56c800 GCTaskThread "ParGC Thread#0" [stack: 0x00000052d5800000,0x00000052d5900000] [id=5996]
+  0x000001b9b828b800 GCTaskThread "ParGC Thread#1" [stack: 0x00000052d6a00000,0x00000052d6b00000] [id=19876]
+  0x000001b9b7ebb000 GCTaskThread "ParGC Thread#2" [stack: 0x00000052d6b00000,0x00000052d6c00000] [id=17692]
+  0x000001b9b7ebb800 GCTaskThread "ParGC Thread#3" [stack: 0x00000052d6c00000,0x00000052d6d00000] [id=13228]
+
+Threads with active compile tasks:
+C2 CompilerThread0   2733 2238       4       java.util.TreeMap::put (247 bytes)
